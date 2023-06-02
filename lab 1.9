@@ -1,0 +1,31 @@
+#include <iostream>
+
+void Temperatures(double fahrenheit) {
+    const double CELSIUS_SCALE = 5.0 / 9.0;
+    const double KELVIN_OFFSET = 273.16;
+
+    double celsius = CELSIUS_SCALE * (fahrenheit - 32.0);
+    double kelvin = celsius + KELVIN_OFFSET;
+
+    std::cout.precision(2);
+    std::cout << "Fahrenheit: " << std::fixed << fahrenheit << "°F" << std::endl;
+    std::cout << "Celsius: " << std::fixed << celsius << "°C" << std::endl;
+    std::cout << "Kelvin: " << std::fixed << kelvin << "K" << std::endl;
+}
+
+int main() {
+    double fahrenheit;
+
+    while (true) {
+        std::cout << "Enter a Fahrenheit temperature (q to quit): ";
+        if (!(std::cin >> fahrenheit))
+            break;
+
+        Temperatures(fahrenheit);
+        std::cout << std::endl;
+    }
+
+    std::cout << "Program exited. Goodbye!" << std::endl;
+
+    return 0;
+}
