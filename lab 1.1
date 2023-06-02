@@ -1,0 +1,26 @@
+#include <iostream>
+
+#define MINUTES_IN_HOUR 60
+
+void convertTime(int minutes) {
+    int hours = minutes / MINUTES_IN_HOUR;
+    int remainingMinutes = minutes % MINUTES_IN_HOUR;
+
+    std::cout << "Time: " << hours << " hours and " << remainingMinutes << " minutes" << std::endl;
+}
+
+int main() {
+    int time;
+
+    while (true) {
+        std::cout << "Enter the time in minutes (0 or less to exit): ";
+        std::cin >> time;
+
+        if (time <= 0)
+            break;
+
+        convertTime(time);
+    }
+
+    return 0;
+}
