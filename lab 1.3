@@ -1,0 +1,24 @@
+#include <iostream>
+
+void convertToWeeksDays(int days) {
+    int weeks = days / 7;
+    int remainingDays = days % 7;
+
+    std::cout << days << " days are " << weeks << " weeks, " << remainingDays << " days." << std::endl;
+}
+
+int main() {
+    int days;
+
+    while (true) {
+        std::cout << "Enter the number of days (enter a nonpositive value to exit): ";
+        std::cin >> days;
+
+        if (days <= 0)
+            break;
+
+        convertToWeeksDays(days);
+    }
+
+    return 0;
+}
