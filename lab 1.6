@@ -1,0 +1,25 @@
+#include <iostream>
+
+int main() {
+    int count, sum;
+
+    while (true) {
+        std::cout << "Enter the number of integers to calculate the sum of squares (Enter a negative value to quit): ";
+        std::cin >> count;
+
+        if (count < 0)
+            break;
+
+        sum = 0;
+        for (int i = 1; i <= count; i++) {
+            sum += i * i;
+        }
+
+        std::cout << "The sum of the squares of the first " << count << " integers is " << sum << std::endl;
+        std::cout << std::endl;
+    }
+
+    std::cout << "Program exited. Goodbye!" << std::endl;
+
+    return 0;
+}
