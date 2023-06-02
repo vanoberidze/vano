@@ -1,0 +1,23 @@
+#include <iostream>
+
+int main() {
+    int rows = 6;
+    int charCount = 65;  // ASCII value for 'A'
+
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j <= i; j++) {
+            std::cout << static_cast<char>(charCount);
+            charCount++;
+
+            if (charCount > 90)  // ASCII value for 'Z'
+                break;
+        }
+
+        std::cout << std::endl;
+
+        if (charCount > 90)  // ASCII value for 'Z'
+            break;
+    }
+
+    return 0;
+}
