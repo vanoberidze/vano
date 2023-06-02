@@ -1,0 +1,27 @@
+#include <iostream>
+
+int main() {
+    int secondOperand;
+
+    std::cout << "This program computes moduli." << std::endl;
+    std::cout << "Enter an integer to serve as the second operand: ";
+    std::cin >> secondOperand;
+
+    int firstOperand;
+    while (true) {
+        std::cout << "Enter the first operand: ";
+        std::cin >> firstOperand;
+
+        if (firstOperand <= 0)
+            break;
+
+        int modulus = firstOperand % secondOperand;
+        std::cout << firstOperand << " % " << secondOperand << " is " << modulus << std::endl;
+
+        std::cout << "Enter next number for the first operand (<= 0 to quit): ";
+    }
+
+    std::cout << "Done" << std::endl;
+
+    return 0;
+}
