@@ -1,0 +1,28 @@
+#include <iostream>
+
+void printPattern(char ch, int numChars, int numLines) {
+    for (int i = 0; i < numLines; i++) {
+        for (int j = 0; j < numChars; j++) {
+            std::cout << ch;
+        }
+        std::cout << std::endl;
+    }
+}
+
+int main() {
+    char character;
+    int numChars, numLines;
+
+    std::cout << "Enter a character: ";
+    std::cin >> character;
+
+    std::cout << "Enter the number of characters per line: ";
+    std::cin >> numChars;
+
+    std::cout << "Enter the number of lines: ";
+    std::cin >> numLines;
+
+    printPattern(character, numChars, numLines);
+
+    return 0;
+}
