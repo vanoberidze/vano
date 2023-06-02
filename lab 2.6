@@ -1,0 +1,22 @@
+#include <iostream>
+
+int main() {
+    int lowerLimit, upperLimit;
+
+    std::cout << "Enter the lower limit: ";
+    std::cin >> lowerLimit;
+
+    std::cout << "Enter the upper limit: ";
+    std::cin >> upperLimit;
+
+    std::cout << "Integer\tSquare\tCube\n";
+
+    for (int i = lowerLimit; i <= upperLimit; i++) {
+        int square = i * i;
+        int cube = i * i * i;
+
+        std::cout << i << "\t" << square << "\t" << cube << "\n";
+    }
+
+    return 0;
+}
