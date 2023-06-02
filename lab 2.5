@@ -1,0 +1,33 @@
+#include <iostream>
+
+#include <iostream>
+
+int main() {
+    char letter;
+
+    std::cout << "Enter an uppercase letter: ";
+    std::cin >> letter;
+
+    int rows = letter - 'A' + 1;
+
+    for (int i = 0; i < rows; i++) {
+        // Print spaces
+        for (int j = 0; j < rows - i - 1; j++) {
+            std::cout << " ";
+        }
+
+        // Print letters in increasing order
+        for (int j = 0; j <= i; j++) {
+            std::cout << static_cast<char>('A' + j);
+        }
+
+        // Print letters in decreasing order
+        for (int j = i - 1; j >= 0; j--) {
+            std::cout << static_cast<char>('A' + j);
+        }
+
+        std::cout << std::endl;
+    }
+
+    return 0;
+}
