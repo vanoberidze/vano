@@ -1,0 +1,30 @@
+#include <iostream>
+
+void convertToFeetInches(double centimeters) {
+    const double CENTIMETERS_IN_INCH = 2.54;
+    const int INCHES_IN_FOOT = 12;
+
+    int feet = static_cast<int>(centimeters / (CENTIMETERS_IN_INCH * INCHES_IN_FOOT));
+    double remainingCentimeters = centimeters - (feet * CENTIMETERS_IN_INCH * INCHES_IN_FOOT);
+    int inches = static_cast<int>(remainingCentimeters / CENTIMETERS_IN_INCH);
+
+    std::cout << centimeters << " cm = " << feet << " feet, " << inches << " inches" << std::endl;
+}
+
+int main() {
+    double centimeters;
+
+    while (true) {
+        std::cout << "Enter a height in centimeters (<=0 to quit): ";
+        std::cin >> centimeters;
+
+        if (centimeters <= 0)
+            break;
+
+        convertToFeetInches(centimeters);
+    }
+
+    std::cout << "bye." << std::endl;
+
+    return 0;
+}
