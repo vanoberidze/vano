@@ -1,0 +1,18 @@
+#include <iostream>
+
+double cube(double num) {
+    return num * num * num;
+}
+
+int main() {
+    double number;
+
+    std::cout << "Enter a number: ";
+    std::cin >> number;
+
+    double cubed = cube(number);
+
+    std::cout << "The cubed value of " << number << " is " << cubed << std::endl;
+
+    return 0;
+}
