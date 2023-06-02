@@ -1,0 +1,18 @@
+#include <iostream>
+
+int main() {
+    double num1, num2;
+
+    while (true) {
+        std::cout << "Enter two floating-point numbers (or nonnumeric input to quit): ";
+        if (!(std::cin >> num1 >> num2))
+            break;
+
+        double result = (num1 - num2) / (num1 * num2);
+        std::cout << "Result: " << result << std::endl;
+    }
+
+    std::cout << "Exiting the program." << std::endl;
+
+    return 0;
+}
