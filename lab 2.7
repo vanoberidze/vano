@@ -1,0 +1,22 @@
+#include <iostream>
+#include <cstring>
+
+int main() {
+    const int MAX_LENGTH = 100;
+
+    char word[MAX_LENGTH];
+
+    std::cout << "Enter a word: ";
+    std::cin >> word;
+
+    int length = strlen(word);
+
+    std::cout << "Reversed word: ";
+    for (int i = length - 1; i >= 0; i--) {
+        std::cout << word[i];
+    }
+
+    std::cout << std::endl;
+
+    return 0;
+}
